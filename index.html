@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Swiper CSS para el carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -93,7 +95,7 @@
     </div>
 </section>
 
-<!-- ========== PORTAFOLIO (VERTICAL - UNA DEBAJO DE OTRA) ========== -->
+<!-- ========== PORTAFOLIO (VERTICAL CON CARRUSEL) ========== -->
 <section id="portafolio" class="portafolio">
     <div class="container">
         <h2 class="section-title">Mis <span class="highlight">proyectos</span></h2>
@@ -101,9 +103,18 @@
             
             <!-- Proyecto 1: Asesoría Camila Caballero -->
             <div class="portafolio-item">
-                <div class="portafolio-imagenes">
-                    <img src="camila1.png" alt="Fashion Stylist 1">
-                    <img src="camila2.png" alt="Fashion Stylist 2">
+                <div class="portafolio-carrusel swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="camila1.png" alt="Fashion Stylist 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="camila2.png" alt="Fashion Stylist 2">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                 <div class="portafolio-info">
                     <h3>Asesoría Camila Caballero</h3>
@@ -119,9 +130,18 @@
 
             <!-- Proyecto 2: Sticky Style -->
             <div class="portafolio-item">
-                <div class="portafolio-imagenes">
-                    <img src="sticky1.png" alt="Sticky Style 1">
-                    <img src="sticky2.png" alt="Sticky Style 2">
+                <div class="portafolio-carrusel swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="sticky1.png" alt="Sticky Style 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sticky2.png" alt="Sticky Style 2">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                 <div class="portafolio-info">
                     <h3>Sticky Style</h3>
@@ -137,9 +157,18 @@
 
             <!-- Proyecto 3: Invitación Boda -->
             <div class="portafolio-item">
-                <div class="portafolio-imagenes">
-                    <img src="boda1.png" alt="Invitación Boda 1">
-                    <img src="boda2.png" alt="Invitación Boda 2">
+                <div class="portafolio-carrusel swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="boda1.png" alt="Invitación Boda 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="boda2.png" alt="Invitación Boda 2">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                 <div class="portafolio-info">
                     <h3>Invitación de Boda</h3>
@@ -155,9 +184,18 @@
 
             <!-- Proyecto 4: Gender Reveal -->
             <div class="portafolio-item">
-                <div class="portafolio-imagenes">
-                    <img src="gender1.png" alt="Gender Reveal 1">
-                    <img src="gender2.png" alt="Gender Reveal 2">
+                <div class="portafolio-carrusel swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="gender1.png" alt="Gender Reveal 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="gender2.png" alt="Gender Reveal 2">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
                 <div class="portafolio-info">
                     <h3>Gender Reveal</h3>
@@ -363,9 +401,31 @@
     </div>
 </footer>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 
 <script>
+    // ========== INICIALIZAR CARRUSELES ==========
+    document.querySelectorAll('.portafolio-carrusel').forEach((carrusel) => {
+        new Swiper(carrusel, {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: carrusel.querySelector('.swiper-pagination'),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: carrusel.querySelector('.swiper-button-next'),
+                prevEl: carrusel.querySelector('.swiper-button-prev'),
+            },
+        });
+    });
+
     // ========== MENÚ HAMBURGUESA ==========
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.querySelector('.nav-links');
@@ -427,7 +487,7 @@
             };
             
             try {
-                const response = await fetch(APPS_SCRIPT_URL, {
+                await fetch(APPS_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
