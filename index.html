@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Swiper CSS para el carrusel -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -95,53 +93,35 @@
     </div>
 </section>
 
-<!-- ========== PORTAFOLIO CON CARRUSEL ========== -->
+<!-- ========== PORTAFOLIO (VERTICAL - UNA DEBAJO DE OTRA) ========== -->
 <section id="portafolio" class="portafolio">
     <div class="container">
         <h2 class="section-title">Mis <span class="highlight">proyectos</span></h2>
-        <div class="portafolio-grid">
+        <div class="portafolio-vertical">
             
-            <!-- Proyecto 1: Fashion Stylist (carrusel con camila1 y camila2) -->
-            <div class="portafolio-card">
-                <div class="portafolio-carrusel swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="camila1.png" alt="Fashion Stylist 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="camila2.png" alt="Fashion Stylist 2">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+            <!-- Proyecto 1: Asesoría Camila Caballero -->
+            <div class="portafolio-item">
+                <div class="portafolio-imagenes">
+                    <img src="camila1.png" alt="Fashion Stylist 1">
+                    <img src="camila2.png" alt="Fashion Stylist 2">
                 </div>
                 <div class="portafolio-info">
-                    <h3>Fashion Stylist</h3>
-                    <p>Web profesional para asesora de imagen</p>
+                    <h3>Asesoría Camila Caballero</h3>
+                    <p>Web profesional para asesora de imagen y stylist</p>
                     <div class="portafolio-tags">
                         <span>⭐ Profesional</span>
                         <span>📱 5 secciones</span>
                         <span>💬 WhatsApp</span>
                     </div>
-                    <a href="#" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web</a>
+                    <a href="https://asesoriascamilacaballero.github.io/asesoriascamilacaballero/index.html" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web →</a>
                 </div>
             </div>
 
-            <!-- Proyecto 2: Sticky Style (carrusel con sticky1 y sticky2) -->
-            <div class="portafolio-card">
-                <div class="portafolio-carrusel swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="sticky1.png" alt="Sticky Style 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="sticky2.png" alt="Sticky Style 2">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+            <!-- Proyecto 2: Sticky Style -->
+            <div class="portafolio-item">
+                <div class="portafolio-imagenes">
+                    <img src="sticky1.png" alt="Sticky Style 1">
+                    <img src="sticky2.png" alt="Sticky Style 2">
                 </div>
                 <div class="portafolio-info">
                     <h3>Sticky Style</h3>
@@ -151,61 +131,43 @@
                         <span>🎨 Catálogo</span>
                         <span>📱 WhatsApp</span>
                     </div>
-                    <a href="#" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web</a>
+                    <a href="https://carolinacaba.github.io/stickystylebo/" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web →</a>
                 </div>
             </div>
 
-            <!-- Proyecto 3: Invitación Boda (carrusel con boda1 y boda2) -->
-            <div class="portafolio-card">
-                <div class="portafolio-carrusel swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="boda1.png" alt="Invitación Boda 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="boda2.png" alt="Invitación Boda 2">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+            <!-- Proyecto 3: Invitación Boda -->
+            <div class="portafolio-item">
+                <div class="portafolio-imagenes">
+                    <img src="boda1.png" alt="Invitación Boda 1">
+                    <img src="boda2.png" alt="Invitación Boda 2">
                 </div>
                 <div class="portafolio-info">
-                    <h3>Invitación Boda</h3>
-                    <p>Invitación digital con música y countdown</p>
+                    <h3>Invitación de Boda</h3>
+                    <p>Invitación digital con música, countdown y RSVP</p>
                     <div class="portafolio-tags">
                         <span>🎵 Con música</span>
                         <span>⏱️ Countdown</span>
                         <span>📋 RSVP</span>
                     </div>
-                    <a href="#" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web</a>
+                    <a href="https://carolinacaba.github.io/invitacion-boda-demo/" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web →</a>
                 </div>
             </div>
 
-            <!-- Proyecto 4: Gender Reveal (carrusel con gender1 y gender2) -->
-            <div class="portafolio-card">
-                <div class="portafolio-carrusel swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="gender1.png" alt="Gender Reveal 1">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="gender2.png" alt="Gender Reveal 2">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+            <!-- Proyecto 4: Gender Reveal -->
+            <div class="portafolio-item">
+                <div class="portafolio-imagenes">
+                    <img src="gender1.png" alt="Gender Reveal 1">
+                    <img src="gender2.png" alt="Gender Reveal 2">
                 </div>
                 <div class="portafolio-info">
                     <h3>Gender Reveal</h3>
-                    <p>Invitación interactiva con apuestas</p>
+                    <p>Invitación interactiva con apuestas y carrusel</p>
                     <div class="portafolio-tags">
                         <span>🎈 Interactivo</span>
                         <span>🎨 Carrusel</span>
                         <span>📋 RSVP</span>
                     </div>
-                    <a href="#" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web</a>
+                    <a href="https://carolinacaba.github.io/gender-reveal-demo/" class="btn-portafolio-link" target="_blank">🔗 Ver sitio web →</a>
                 </div>
             </div>
         </div>
@@ -389,8 +351,8 @@
             <div class="footer-links">
                 <h4>Contacto</h4>
                 <ul>
-                    <li><a href="https://wa.me/59160507126">WhatsApp</a></li>
-                    <li><a href="https://www.instagram.com/e.ventbo/">Instagram</a></li>
+                    <li><a href="https://wa.me/59160507126" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/e.ventbo/" target="_blank">Instagram</a></li>
                     <li><a href="#">TikTok</a></li>
                 </ul>
             </div>
@@ -401,31 +363,9 @@
     </div>
 </footer>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 
 <script>
-    // ========== INICIALIZAR CARRUSELES DEL PORTAFOLIO ==========
-    document.querySelectorAll('.portafolio-carrusel').forEach((carrusel, index) => {
-        new Swiper(carrusel, {
-            slidesPerView: 1,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: carrusel.querySelector('.swiper-pagination'),
-                clickable: true,
-            },
-            navigation: {
-                nextEl: carrusel.querySelector('.swiper-button-next'),
-                prevEl: carrusel.querySelector('.swiper-button-prev'),
-            },
-        });
-    });
-
     // ========== MENÚ HAMBURGUESA ==========
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.querySelector('.nav-links');
@@ -463,10 +403,10 @@
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const nombre = contactForm.querySelector('input[placeholder="Tu nombre"]')?.value || '';
-            const email = contactForm.querySelector('input[placeholder="Tu correo"]')?.value || '';
+            const nombre = contactForm.querySelector('input[placeholder="Tu nombre"]')?.value.trim() || '';
+            const email = contactForm.querySelector('input[placeholder="Tu correo"]')?.value.trim() || '';
             const servicio = contactForm.querySelector('select')?.value || '';
-            const mensaje = contactForm.querySelector('textarea')?.value || '';
+            const mensaje = contactForm.querySelector('textarea')?.value.trim() || '';
             
             if (!nombre) {
                 mostrarMensaje('❌ Por favor, ingresa tu nombre', 'error');
@@ -487,7 +427,7 @@
             };
             
             try {
-                await fetch(APPS_SCRIPT_URL, {
+                const response = await fetch(APPS_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
